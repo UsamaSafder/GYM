@@ -1,0 +1,388 @@
+{
+  "stats": {
+    "workouts": 25,
+    "nutrition_tips": 40,
+    "local_gyms": 12
+  },
+  "popular_categories": [
+    {
+      "title": "Beginner Workouts",
+      "description": "Simple beginner sessions to build consistency and confidence.",
+      "link": "/workouts"
+    },
+    {
+      "title": "Weight Loss",
+      "description": "Fat-burning cardio and bodyweight combinations.",
+      "link": "/workouts"
+    },
+    {
+      "title": "Strength Training",
+      "description": "Progressive resistance routines for strength and muscle.",
+      "link": "/workouts"
+    },
+    {
+      "title": "Healthy Meal Ideas",
+      "description": "Balanced meal suggestions for sustainable energy.",
+      "link": "/nutrition"
+    }
+  ],
+  "workouts": [
+    {
+      "id": "beginner",
+      "title": "Beginner Workouts",
+      "description": "Starter-friendly plans to build a strong fitness base.",
+      "goal": "Improve baseline fitness, movement quality, and consistency.",
+      "level": "Beginner",
+      "equipment": "Bodyweight / Light Dumbbells",
+      "duration": "30-40 minutes",
+      "weekly_frequency": "3 days per week",
+      "rest_guidance": "Rest 45-60 seconds between sets.",
+      "progression_guidance": "Increase reps by 1-2 each week, then add light resistance.",
+      "exercises": [
+        "Warm-up: 5 minutes walking",
+        "Bodyweight squats: 3 x 10",
+        "Push-ups: 3 x 8",
+        "Lunges: 3 x 10",
+        "Plank: 3 x 30 seconds",
+        "Cool down stretching"
+      ],
+      "sets_reps": "3 rounds with controlled tempo and 45-60 sec rest",
+      "guidance": [
+        "Focus on form before increasing speed.",
+        "Keep a training log to track weekly improvement.",
+        "Take at least one rest day between sessions."
+      ]
+    },
+    {
+      "id": "weight-loss",
+      "title": "Weight Loss Workouts",
+      "description": "High-energy workouts to support calorie burn and stamina.",
+      "goal": "Increase heart rate and improve endurance while preserving muscle.",
+      "level": "Beginner to Intermediate",
+      "equipment": "Bodyweight",
+      "duration": "25-35 minutes",
+      "weekly_frequency": "4 days per week",
+      "rest_guidance": "Rest 20-40 seconds between exercises, 90 seconds between rounds.",
+      "progression_guidance": "Add one extra round after 2 weeks or shorten rest time.",
+      "exercises": [
+        "Jumping jacks: 3 x 30 sec",
+        "Mountain climbers: 3 x 20",
+        "Burpees: 3 x 10",
+        "High knees: 3 x 30 sec",
+        "Plank: 3 x 30 sec"
+      ],
+      "sets_reps": "Perform as circuits with 30 sec rest between exercises",
+      "guidance": [
+        "Start every session with dynamic warm-up.",
+        "Keep hydration during high-intensity rounds.",
+        "Pair with a moderate calorie deficit for better fat loss."
+      ]
+    },
+    {
+      "id": "strength",
+      "title": "Strength Training",
+      "description": "Compound lifts for strength and lean muscle growth.",
+      "goal": "Build full-body strength using progressive overload.",
+      "level": "Intermediate",
+      "equipment": "Barbell / Dumbbells / Bench",
+      "duration": "45-60 minutes",
+      "weekly_frequency": "4 days per week",
+      "rest_guidance": "Rest 2-3 minutes on heavy lifts, 60-90 sec on accessories.",
+      "progression_guidance": "Increase weight by 2.5-5% when all target reps are achieved.",
+      "exercises": [
+        "Squats",
+        "Deadlifts",
+        "Bench press",
+        "Shoulder press",
+        "Rows"
+      ],
+      "sets_reps": "3-5 sets per exercise, 5-12 reps based on experience",
+      "guidance": [
+        "Prioritize compound lifts early in the workout.",
+        "Use controlled eccentric movement for better muscle stimulus.",
+        "Schedule at least 48 hours before training same muscle groups again."
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home Workouts",
+      "description": "No-equipment training you can do anywhere.",
+      "goal": "Stay active at home with effective bodyweight exercises.",
+      "level": "All Levels",
+      "equipment": "No Equipment",
+      "duration": "20-30 minutes",
+      "weekly_frequency": "4-5 days per week",
+      "rest_guidance": "Rest 30-45 seconds between movements.",
+      "progression_guidance": "Increase total rounds or tempo control each week.",
+      "exercises": [
+        "Bodyweight squats",
+        "Push-ups",
+        "Sit-ups",
+        "Glute bridges",
+        "Plank"
+      ],
+      "sets_reps": "3-4 rounds, 10-15 reps per movement",
+      "guidance": [
+        "Use slow form to increase difficulty without equipment.",
+        "Train in a clear space with stable footing.",
+        "Combine with light walking on rest days."
+      ]
+    },
+    {
+      "id": "full-body",
+      "title": "Full Body Workouts",
+      "description": "Balanced routines targeting major muscle groups.",
+      "goal": "Improve overall strength, mobility, and conditioning.",
+      "level": "Beginner to Intermediate",
+      "equipment": "Dumbbells / Bodyweight",
+      "duration": "35-50 minutes",
+      "weekly_frequency": "3 days per week",
+      "rest_guidance": "Rest 60-90 seconds between sets.",
+      "progression_guidance": "Add 1 set per exercise or increase dumbbell load gradually.",
+      "exercises": [
+        "Goblet squats",
+        "Push-ups",
+        "Bent-over rows",
+        "Romanian deadlifts",
+        "Plank shoulder taps",
+        "Walking lunges"
+      ],
+      "sets_reps": "3-4 sets each, 8-12 reps",
+      "guidance": [
+        "Alternate push and pull exercises for better balance.",
+        "Finish with mobility stretching for hips and shoulders.",
+        "Keep one easy recovery day after each session."
+      ]
+    },
+    {
+      "id": "muscle-gain",
+      "title": "Muscle Gain Plan",
+      "description": "Hypertrophy-focused split for lean muscle growth.",
+      "goal": "Increase muscle size with structured volume and recovery.",
+      "level": "Intermediate",
+      "equipment": "Gym Equipment",
+      "duration": "60-70 minutes",
+      "weekly_frequency": "5 days per week",
+      "rest_guidance": "Rest 60-90 seconds between hypertrophy sets.",
+      "progression_guidance": "Use double progression: increase reps first, then increase load.",
+      "exercises": [
+        "Incline dumbbell press: 4 x 8-12",
+        "Lat pulldown: 4 x 10-12",
+        "Leg press: 4 x 10-12",
+        "Romanian deadlift: 3 x 8-10",
+        "Lateral raises: 3 x 12-15",
+        "Cable curls / triceps pressdown: 3 x 12"
+      ],
+      "sets_reps": "16-20 working sets per major muscle group each week",
+      "guidance": [
+        "Consume adequate protein and sleep 7-9 hours nightly.",
+        "Train close to failure with clean form.",
+        "Plan a deload week every 6-8 weeks."
+      ]
+    },
+    {
+      "id": "mobility-core",
+      "title": "Mobility & Core Plan",
+      "description": "Low-impact sessions to improve posture, movement, and core stability.",
+      "goal": "Reduce stiffness and strengthen core support muscles.",
+      "level": "All Levels",
+      "equipment": "Mat / Resistance Band (Optional)",
+      "duration": "25-35 minutes",
+      "weekly_frequency": "3-4 days per week",
+      "rest_guidance": "Use 20-30 sec transitions between drills.",
+      "progression_guidance": "Increase hold duration and range of motion gradually.",
+      "exercises": [
+        "Cat-cow mobility flow: 2 x 8",
+        "World's greatest stretch: 2 x 6 per side",
+        "Dead bug: 3 x 10",
+        "Side plank: 3 x 20-40 sec",
+        "Bird dog: 3 x 10 per side",
+        "Hip flexor stretch: 2 x 45 sec"
+      ],
+      "sets_reps": "Focus on control, breathing, and posture quality",
+      "guidance": [
+        "Breathe slowly through each mobility movement.",
+        "Stop before painful ranges and move progressively.",
+        "Add this plan between heavier training days."
+      ]
+    }
+  ],
+  "nutrition_basics": [
+    {
+      "title": "Protein",
+      "description": "Protein helps build and repair muscles. Good sources include eggs, fish, chicken, beans, and yogurt."
+    },
+    {
+      "title": "Carbohydrates",
+      "description": "Carbs provide energy for workouts. Choose whole grains, oats, fruits, and vegetables for steady fuel."
+    },
+    {
+      "title": "Healthy Fats",
+      "description": "Healthy fats support hormones and recovery. Include nuts, seeds, olive oil, and avocado in moderation."
+    },
+    {
+      "title": "Water / Hydration",
+      "description": "Hydration supports performance and recovery. Drink water throughout the day and around workouts."
+    }
+  ],
+  "meal_plans": [
+    {
+      "name": "Breakfast",
+      "items": [
+        "Oats with banana and milk",
+        "Boiled eggs",
+        "Green tea or water",
+        "Optional: chia seeds for extra fiber"
+      ]
+    },
+    {
+      "name": "Lunch",
+      "items": [
+        "Grilled chicken",
+        "Brown rice",
+        "Mixed vegetables",
+        "Yogurt or buttermilk"
+      ]
+    },
+    {
+      "name": "Snack",
+      "items": [
+        "Greek yogurt with berries",
+        "A handful of almonds or peanuts",
+        "1 seasonal fruit"
+      ]
+    },
+    {
+      "name": "Dinner",
+      "items": [
+        "Fish or chicken",
+        "Salad",
+        "Sweet potato or whole wheat bread",
+        "Soup (optional for satiety)"
+      ]
+    }
+  ],
+  "nutrition_tips": [
+    "Drink enough water",
+    "Avoid too much junk food",
+    "Include protein in meals",
+    "Eat fruits and vegetables",
+    "Do not skip breakfast"
+  ],
+  "pre_workout": [
+    "Banana",
+    "Oats",
+    "Yogurt"
+  ],
+  "post_workout": [
+    "Eggs",
+    "Chicken",
+    "Milk",
+    "Protein-rich meals"
+  ],
+  "nutrition_details": [
+    {
+      "title": "Calorie Awareness",
+      "description": "For fat loss, eat slightly below maintenance calories. For muscle gain, eat slightly above maintenance with quality foods."
+    },
+    {
+      "title": "Balanced Plate Method",
+      "description": "Fill half your plate with vegetables, one quarter with lean protein, and one quarter with whole-grain carbs."
+    },
+    {
+      "title": "Protein Timing",
+      "description": "Distribute protein across 3-5 meals daily to support muscle recovery and appetite control."
+    },
+    {
+      "title": "Recovery Nutrition",
+      "description": "After training, combine protein + carbs within 60-90 minutes to improve glycogen refill and muscle repair."
+    }
+  ],
+  "goal_based_nutrition": [
+    {
+      "goal": "Weight Loss",
+      "focus": "Moderate calorie deficit, high-fiber meals, and protein in each meal.",
+      "sample": "Grilled chicken salad + brown rice + fruit"
+    },
+    {
+      "goal": "Muscle Gain",
+      "focus": "Calorie surplus from whole foods, protein-rich snacks, and strength-focused fueling.",
+      "sample": "Rice + lean meat + vegetables + yogurt"
+    },
+    {
+      "goal": "Maintenance",
+      "focus": "Balanced intake with consistent hydration and meal timing.",
+      "sample": "Protein + carbs + healthy fats in each main meal"
+    }
+  ],
+  "gyms": [
+    {
+      "name": "Power House Gym",
+      "city": "Downtown",
+      "address": "12 Main Street, Downtown",
+      "phone": "+123450001",
+      "timings": "6:00 AM - 11:00 PM",
+      "facilities": ["Cardio", "Weights", "Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=12+Main+Street+Downtown"
+    },
+    {
+      "name": "FitZone Gym",
+      "city": "Westside",
+      "address": "45 West Avenue, Westside",
+      "phone": "+123450002",
+      "timings": "5:30 AM - 10:30 PM",
+      "facilities": ["Cardio", "Weights", "Group Classes", "Shower"],
+      "map_link": "https://maps.google.com/?q=45+West+Avenue+Westside"
+    },
+    {
+      "name": "Alpha Fitness Club",
+      "city": "North City",
+      "address": "89 North Road, North City",
+      "phone": "+123450003",
+      "timings": "6:00 AM - 10:00 PM",
+      "facilities": ["Weights", "Trainer", "Parking", "CrossFit Zone"],
+      "map_link": "https://maps.google.com/?q=89+North+Road+North+City"
+    },
+    {
+      "name": "Iron Core Gym",
+      "city": "East Park",
+      "address": "33 Park Lane, East Park",
+      "phone": "+123450004",
+      "timings": "24 Hours",
+      "facilities": ["Cardio", "Weights", "Personal Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=33+Park+Lane+East+Park"
+    },
+    {
+      "name": "Flex Fitness Studio",
+      "city": "South Point",
+      "address": "17 Lake View, South Point",
+      "phone": "+123450005",
+      "timings": "6:00 AM - 9:30 PM",
+      "facilities": ["Cardio", "Yoga", "Pilates", "Locker Room"],
+      "map_link": "https://maps.google.com/?q=17+Lake+View+South+Point"
+    },
+    {
+      "name": "Muscle Factory",
+      "city": "Central Hub",
+      "address": "101 Central Blvd, Central Hub",
+      "phone": "+123450006",
+      "timings": "5:00 AM - 12:00 AM",
+      "facilities": ["Weights", "Powerlifting Area", "Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=101+Central+Blvd+Central+Hub"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can beginners use this website?",
+      "answer": "Yes. All workout and nutrition content is designed to be beginner-friendly and easy to follow."
+    },
+    {
+      "question": "Do I need a gym membership to start?",
+      "answer": "No. You can begin with home workouts and basic nutrition habits, then add a gym later."
+    },
+    {
+      "question": "Is this a personalized coaching service?",
+      "answer": "This is an informational platform with practical guidance and sample plans, not personal medical advice."
+    }
+  ]
+}

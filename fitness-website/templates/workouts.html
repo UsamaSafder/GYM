@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Workouts | FitnessHub{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <h1>Workout Plans</h1>
+        <p>Choose from structured plans with level, frequency, progression, and coaching guidance.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Workout Categories</h2>
+        <div class="card-grid three-col">
+            {% for workout in workouts %}
+            <article class="card reveal">
+                <h3>{{ workout.title }}</h3>
+                <p>{{ workout.description }}</p>
+                <button class="btn btn-primary workout-btn" data-workout-id="{{ workout.id }}">View Details</button>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Workout Details</h2>
+        <article id="workout-details" class="card details-card" aria-live="polite">
+            <h3>Select a category</h3>
+            <p>Click any workout category above to view full details.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Workout Tips</h2>
+        <div class="card-grid three-col">
+            <article class="tip-card reveal">Start with proper warm-up</article>
+            <article class="tip-card reveal">Maintain correct form</article>
+            <article class="tip-card reveal">Stay consistent</article>
+            <article class="tip-card reveal">Rest between sessions</article>
+            <article class="tip-card reveal">Increase intensity gradually</article>
+        </div>
+    </div>
+</section>
+
+<script id="workouts-data" type="application/json">{{ workouts | tojson }}</script>
+{% endblock %}

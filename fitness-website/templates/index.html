@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | FitnessHub{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <p class="eyebrow">Your All-in-One Fitness Companion</p>
+            <h1>Start Your Fitness Journey Today</h1>
+            <p class="hero-subheading">Improve your health with clear workout advice, practical nutrition guidance, and tools to find local gyms all in one place.</p>
+            <div class="button-group">
+                <a href="{{ url_for('workouts') }}" class="btn btn-primary">Explore Workouts</a>
+                <a href="{{ url_for('gyms') }}" class="btn btn-outline">Find Gyms</a>
+            </div>
+        </div>
+        <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="People training in a gym">
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Core Features</h2>
+        <div class="card-grid three-col">
+            <article class="card reveal">
+                <div class="icon">🏋️</div>
+                <h3>Workout Plans</h3>
+                <p>Beginner-friendly and effective workout guidance for different fitness goals.</p>
+            </article>
+            <article class="card reveal">
+                <div class="icon">🥗</div>
+                <h3>Nutrition Guidance</h3>
+                <p>Simple food and meal suggestions to support a healthy lifestyle.</p>
+            </article>
+            <article class="card reveal">
+                <div class="icon">📍</div>
+                <h3>Gym Finder</h3>
+                <p>Use simple tools to search and explore local gyms with useful details.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Why Choose Us</h2>
+        <div class="card-grid two-col choose-grid">
+            <article class="card choose-card reveal">
+                <div class="choose-badge">01</div>
+                <h3>Easy to Use</h3>
+                <p>Simple navigation and clear sections help you find workouts, nutrition tips, and gym tools quickly.</p>
+            </article>
+            <article class="card choose-card reveal">
+                <div class="choose-badge">02</div>
+                <h3>Beginner Friendly</h3>
+                <p>Plans are written in easy language with practical steps so new users can start with confidence.</p>
+            </article>
+            <article class="card choose-card reveal">
+                <div class="choose-badge">03</div>
+                <h3>Practical Guidance</h3>
+                <p>Every recommendation focuses on real daily habits you can follow for consistent progress.</p>
+            </article>
+            <article class="card choose-card reveal">
+                <div class="choose-badge">04</div>
+                <h3>All-in-One Fitness Support</h3>
+                <p>Workout planning, better nutrition decisions, and local gym discovery are combined in one place.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Popular Categories</h2>
+        <div class="card-grid four-col">
+            {% for category in categories %}
+            <a href="{{ category.link }}" class="card card-link reveal">
+                <h3>{{ category.title }}</h3>
+                <p>{{ category.description }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Quick Health Tools</h2>
+        <div class="card-grid two-col">
+            <article class="card reveal">
+                <h3>BMI Calculator</h3>
+                <p>Check your Body Mass Index quickly.</p>
+                <form id="bmi-form" class="inline-form">
+                    <label>
+                        Height (cm)
+                        <input type="number" id="height" min="50" max="250" required>
+                    </label>
+                    <label>
+                        Weight (kg)
+                        <input type="number" id="weight" min="20" max="300" required>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Calculate BMI</button>
+                </form>
+                <p id="bmi-result" class="result" aria-live="polite"></p>
+            </article>
+            <article class="card reveal">
+                <h3>Platform Highlights</h3>
+                <div class="stats-grid">
+                    <div>
+                        <p class="stat-number" data-counter="{{ stats.workouts }}">0</p>
+                        <p class="muted">Workout Guides</p>
+                    </div>
+                    <div>
+                        <p class="stat-number" data-counter="{{ stats.nutrition_tips }}">0</p>
+                        <p class="muted">Nutrition Tips</p>
+                    </div>
+                    <div>
+                        <p class="stat-number" data-counter="{{ stats.local_gyms }}">0</p>
+                        <p class="muted">Gyms Listed</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            {% for faq in faqs %}
+            <details class="card reveal">
+                <summary>{{ faq.question }}</summary>
+                <p>{{ faq.answer }}</p>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section cta">
+    <div class="container">
+        <h2>Ready to improve your health?</h2>
+        <p>Start your fitness journey with workouts, nutrition tips, and local gym finder tools.</p>
+        <a href="{{ url_for('workouts') }}" class="btn btn-primary">Get Started</a>
+    </div>
+</section>
+{% endblock %}

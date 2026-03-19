@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Find Gyms | FitnessHub{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <h1>Find Local Gyms</h1>
+        <p>Search gyms by city or area and view basic details.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <label for="gym-search" class="search-label">Search by gym name, city, or area</label>
+        <input id="gym-search" class="search-input" type="search" placeholder="e.g. Downtown, Westside, FitZone">
+        <p id="gym-results-count" class="muted"></p>
+        <div class="card-grid three-col" id="gym-cards">
+            {% for gym in gyms %}
+            <article
+                class="card gym-card reveal"
+                data-name="{{ gym.name|lower }}"
+                data-city="{{ gym.city|lower }}"
+                data-address="{{ gym.address|lower }}"
+            >
+                <h3>{{ gym.name }}</h3>
+                <p><strong>Area:</strong> {{ gym.city }}</p>
+                <p><strong>Address:</strong> {{ gym.address }}</p>
+                <p><strong>Opening Hours:</strong> {{ gym.timings }}</p>
+                <p><strong>Contact:</strong> <a href="tel:{{ gym.phone }}">{{ gym.phone }}</a></p>
+                <p><strong>Facilities:</strong> {{ gym.facilities | join(', ') }}</p>
+                <a class="btn btn-outline" href="{{ gym.map_link }}" target="_blank" rel="noopener noreferrer">View on Map</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Sample Map Location</h2>
+        <div class="map-wrap reveal">
+            <iframe
+                title="Sample gym location"
+                src="https://maps.google.com/maps?q=Times%20Square%20Gym&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Nutrition | FitnessHub{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+    <div class="container">
+        <h1>Nutrition Guidance</h1>
+        <p>Healthy eating supports energy, recovery, and fitness progress.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Nutrition Basics</h2>
+        <div class="card-grid four-col">
+            {% for item in nutrition_basics %}
+            <article class="card reveal">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Sample Meal Plans</h2>
+        <div class="card-grid three-col">
+            {% for meal in meal_plans %}
+            <article class="card reveal">
+                <h3>{{ meal.name }}</h3>
+                <ul class="list">
+                    {% for item in meal['items'] %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Fitness Nutrition Tips</h2>
+        <div class="card-grid three-col">
+            {% for tip in nutrition_tips %}
+            <article class="tip-card reveal">{{ tip }}</article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Detailed Nutrition Guidance</h2>
+        <div class="card-grid two-col nutrition-detail-grid">
+            {% for detail in nutrition_details %}
+            <article class="card reveal">
+                <h3>{{ detail.title }}</h3>
+                <p>{{ detail.description }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Goal-Based Nutrition</h2>
+        <div class="card-grid three-col">
+            {% for item in goal_based_nutrition %}
+            <article class="card reveal">
+                <h3>{{ item.goal }}</h3>
+                <p><strong>Focus:</strong> {{ item.focus }}</p>
+                <p><strong>Sample Plate:</strong> {{ item.sample }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Pre-Workout and Post-Workout Advice</h2>
+        <div class="card-grid two-col">
+            <article class="card reveal">
+                <h3>Pre-Workout</h3>
+                <ul class="list">
+                    {% for item in pre_workout %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="card reveal">
+                <h3>Post-Workout</h3>
+                <ul class="list">
+                    {% for item in post_workout %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

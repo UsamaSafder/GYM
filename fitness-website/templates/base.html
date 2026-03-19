@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FitnessHub{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="{{ url_for('home') }}">FitnessHub</a>
+            <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="main-menu">
+                <li><a href="{{ url_for('home') }}" class="{{ 'active' if request.path == '/' else '' }}">Home</a></li>
+                <li><a href="{{ url_for('workouts') }}" class="{{ 'active' if request.path == '/workouts' else '' }}">Workouts</a></li>
+                <li><a href="{{ url_for('nutrition') }}" class="{{ 'active' if request.path == '/nutrition' else '' }}">Nutrition</a></li>
+                <li><a href="{{ url_for('gyms') }}" class="{{ 'active' if request.path == '/gyms' else '' }}">Find Gyms</a></li>
+                <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.path == '/about' else '' }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <section class="container flash-wrap" aria-live="polite">
+                    {% for category, message in messages %}
+                        <div class="flash-message flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </section>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>FitnessHub</h3>
+                <p class="muted">Helping you improve your health with clear workout advice, nutrition guidance, and local gym finder tools in one simple platform.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('workouts') }}">Workouts</a></li>
+                    <li><a href="{{ url_for('nutrition') }}">Nutrition</a></li>
+                    <li><a href="{{ url_for('gyms') }}">Find Gyms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a></li>
+                    <li><a href="tel:+1234567890">+1234567890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© {{ current_year }} FitnessHub. All rights reserved.</div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>
