@@ -74,8 +74,11 @@ if (workoutDataEl && workoutDetailsEl) {
 const gymSearchInput = document.getElementById('gym-search');
 const gymCards = document.querySelectorAll('.gym-card');
 const gymCount = document.getElementById('gym-results-count');
+const cityChips = document.querySelectorAll('.city-chip');
 
 if (gymSearchInput && gymCards.length) {
+    let activeCityFilter = 'all';
+
     const updateGymCount = () => {
         const visible = [...gymCards].filter((card) => card.style.display !== 'none').length;
         if (gymCount) {
@@ -83,18 +86,48 @@ if (gymSearchInput && gymCards.length) {
         }
     };
 
-    updateGymCount();
+    const filterGyms = () => {
+        const search = gymSearchInput.value.trim().toLowerCase();
 
-    gymSearchInput.addEventListener('input', (event) => {
-        const search = event.target.value.trim().toLowerCase();
         gymCards.forEach((card) => {
             const name = card.dataset.name || '';
             const city = card.dataset.city || '';
             const address = card.dataset.address || '';
-            const shouldShow = name.includes(search) || city.includes(search) || address.includes(search);
-            card.style.display = shouldShow ? 'block' : 'none';
+            const facilities = card.dataset.facilities || '';
+
+            const matchesSearch =
+                name.includes(search) || city.includes(search) || address.includes(search) || facilities.includes(search);
+            const matchesCity = activeCityFilter === 'all' || city.includes(activeCityFilter);
+
+            card.style.display = matchesSearch && matchesCity ? '' : 'none';
         });
+
         updateGymCount();
+    };
+
+    updateGymCount();
+
+    gymSearchInput.addEventListener('input', (event) => {
+        if (event.target.value.trim()) {
+            cityChips.forEach((chip) => chip.classList.remove('active'));
+            const allChip = document.querySelector('.city-chip[data-city="all"]');
+            if (allChip) {
+                allChip.classList.add('active');
+            }
+            activeCityFilter = 'all';
+        }
+
+        filterGyms();
+    });
+
+    cityChips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+            cityChips.forEach((item) => item.classList.remove('active'));
+            chip.classList.add('active');
+            activeCityFilter = chip.dataset.city || 'all';
+            gymSearchInput.value = '';
+            filterGyms();
+        });
     });
 }
 

@@ -12,9 +12,19 @@
 
 <section class="section">
     <div class="container">
-        <label for="gym-search" class="search-label">Search by gym name, city, or area</label>
-        <input id="gym-search" class="search-input" type="search" placeholder="e.g. Downtown, Westside, FitZone">
-        <p id="gym-results-count" class="muted"></p>
+        <div class="gym-toolbar card reveal">
+            <label for="gym-search" class="search-label">Search by gym name, city, area, or facility</label>
+            <input id="gym-search" class="search-input" type="search" placeholder="e.g. Lahore, Karachi, Trainer, Cardio">
+            <div class="city-chip-wrap" aria-label="Popular city filters">
+                <button type="button" class="city-chip active" data-city="all">All</button>
+                <button type="button" class="city-chip" data-city="lahore">Lahore</button>
+                <button type="button" class="city-chip" data-city="karachi">Karachi</button>
+                <button type="button" class="city-chip" data-city="islamabad">Islamabad</button>
+                <button type="button" class="city-chip" data-city="rawalpindi">Rawalpindi</button>
+                <button type="button" class="city-chip" data-city="faisalabad">Faisalabad</button>
+            </div>
+        </div>
+        <p id="gym-results-count" class="muted gym-results-count"></p>
         <div class="card-grid three-col" id="gym-cards">
             {% for gym in gyms %}
             <article
@@ -22,13 +32,20 @@
                 data-name="{{ gym.name|lower }}"
                 data-city="{{ gym.city|lower }}"
                 data-address="{{ gym.address|lower }}"
+                data-facilities="{{ gym.facilities | join(' ') | lower }}"
             >
-                <h3>{{ gym.name }}</h3>
-                <p><strong>Area:</strong> {{ gym.city }}</p>
-                <p><strong>Address:</strong> {{ gym.address }}</p>
-                <p><strong>Opening Hours:</strong> {{ gym.timings }}</p>
-                <p><strong>Contact:</strong> <a href="tel:{{ gym.phone }}">{{ gym.phone }}</a></p>
-                <p><strong>Facilities:</strong> {{ gym.facilities | join(', ') }}</p>
+                <div class="gym-card-head">
+                    <h3>{{ gym.name }}</h3>
+                    <span class="gym-city-badge">{{ gym.city }}</span>
+                </div>
+                <p class="gym-meta"><strong>Address:</strong> {{ gym.address }}</p>
+                <p class="gym-meta"><strong>Opening Hours:</strong> {{ gym.timings }}</p>
+                <p class="gym-meta"><strong>Contact:</strong> <a href="tel:{{ gym.phone }}">{{ gym.phone }}</a></p>
+                <div class="facility-pills">
+                    {% for facility in gym.facilities %}
+                    <span class="facility-pill">{{ facility }}</span>
+                    {% endfor %}
+                </div>
                 <a class="btn btn-outline" href="{{ gym.map_link }}" target="_blank" rel="noopener noreferrer">View on Map</a>
             </article>
             {% endfor %}

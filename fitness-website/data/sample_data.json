@@ -2,7 +2,7 @@
   "stats": {
     "workouts": 25,
     "nutrition_tips": 40,
-    "local_gyms": 12
+    "local_gyms": 32
   },
   "popular_categories": [
     {
@@ -549,6 +549,186 @@
       "timings": "5:00 AM - 12:00 AM",
       "facilities": ["Weights", "Powerlifting Area", "Trainer", "Parking"],
       "map_link": "https://maps.google.com/?q=101+Central+Blvd+Central+Hub"
+    },
+    {
+      "name": "Titan Fitness Lahore",
+      "city": "Lahore",
+      "address": "MM Alam Road, Gulberg, Lahore",
+      "phone": "+923001112233",
+      "timings": "6:00 AM - 11:00 PM",
+      "facilities": ["Cardio", "Weights", "Personal Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=MM+Alam+Road+Lahore"
+    },
+    {
+      "name": "Prime Strength Club",
+      "city": "Karachi",
+      "address": "Shahrah-e-Faisal, Karachi",
+      "phone": "+923002224466",
+      "timings": "5:30 AM - 11:30 PM",
+      "facilities": ["Cardio", "Weights", "Steam", "Locker Room"],
+      "map_link": "https://maps.google.com/?q=Shahrah-e-Faisal+Karachi"
+    },
+    {
+      "name": "Capital Fit Arena",
+      "city": "Islamabad",
+      "address": "F-10 Markaz, Islamabad",
+      "phone": "+923003336699",
+      "timings": "6:00 AM - 10:30 PM",
+      "facilities": ["CrossFit Zone", "Weights", "Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=F-10+Markaz+Islamabad"
+    },
+    {
+      "name": "Rawal Power Gym",
+      "city": "Rawalpindi",
+      "address": "Satellite Town, Rawalpindi",
+      "phone": "+923004447788",
+      "timings": "6:30 AM - 11:00 PM",
+      "facilities": ["Cardio", "Weights", "Group Classes", "Trainer"],
+      "map_link": "https://maps.google.com/?q=Satellite+Town+Rawalpindi"
+    },
+    {
+      "name": "Fit Nation Faisalabad",
+      "city": "Faisalabad",
+      "address": "D Ground, Faisalabad",
+      "phone": "+923005551122",
+      "timings": "6:00 AM - 10:00 PM",
+      "facilities": ["Weights", "Cardio", "HIIT Area", "Parking"],
+      "map_link": "https://maps.google.com/?q=D+Ground+Faisalabad"
+    },
+    {
+      "name": "KPK Iron House",
+      "city": "Peshawar",
+      "address": "University Road, Peshawar",
+      "phone": "+923006662244",
+      "timings": "7:00 AM - 10:30 PM",
+      "facilities": ["Weights", "Trainer", "Cardio", "Parking"],
+      "map_link": "https://maps.google.com/?q=University+Road+Peshawar"
+    },
+    {
+      "name": "Multan Fitness Point",
+      "city": "Multan",
+      "address": "Cantt Area, Multan",
+      "phone": "+923007773355",
+      "timings": "6:00 AM - 10:00 PM",
+      "facilities": ["Cardio", "Weights", "Sauna", "Locker Room"],
+      "map_link": "https://maps.google.com/?q=Cantt+Area+Multan"
+    },
+    {
+      "name": "Elite Gym Gujranwala",
+      "city": "Gujranwala",
+      "address": "Model Town, Gujranwala",
+      "phone": "+923008884466",
+      "timings": "6:30 AM - 10:30 PM",
+      "facilities": ["Cardio", "Weights", "Trainer", "Shower"],
+      "map_link": "https://maps.google.com/?q=Model+Town+Gujranwala"
+    },
+    {
+      "name": "Champion Fitness Sialkot",
+      "city": "Sialkot",
+      "address": "Cantt Road, Sialkot",
+      "phone": "+923009995577",
+      "timings": "6:00 AM - 10:00 PM",
+      "facilities": ["Weights", "Cardio", "Functional Training", "Parking"],
+      "map_link": "https://maps.google.com/?q=Cantt+Road+Sialkot"
+    },
+    {
+      "name": "Hyderabad Fitness Hub",
+      "city": "Hyderabad",
+      "address": "Auto Bhan Road, Hyderabad",
+      "phone": "+923001234567",
+      "timings": "6:30 AM - 10:30 PM",
+      "facilities": ["Cardio", "Weights", "Group Classes", "Trainer"],
+      "map_link": "https://maps.google.com/?q=Auto+Bhan+Road+Hyderabad+Pakistan"
+    },
+    {
+      "name": "Lahore Strength Lab",
+      "city": "Lahore",
+      "address": "Johar Town, Lahore",
+      "phone": "+923101112233",
+      "timings": "5:30 AM - 11:00 PM",
+      "facilities": ["Weights", "Cardio", "CrossFit Zone", "Steam"],
+      "map_link": "https://maps.google.com/?q=Johar+Town+Lahore"
+    },
+    {
+      "name": "Karachi Core Fitness",
+      "city": "Karachi",
+      "address": "Clifton Block 5, Karachi",
+      "phone": "+923102224466",
+      "timings": "6:00 AM - 12:00 AM",
+      "facilities": ["Cardio", "Weights", "Personal Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=Clifton+Block+5+Karachi"
+    },
+    {
+      "name": "Islamabad Performance Gym",
+      "city": "Islamabad",
+      "address": "G-11 Markaz, Islamabad",
+      "phone": "+923103336699",
+      "timings": "6:00 AM - 11:00 PM",
+      "facilities": ["Functional Training", "Weights", "Cardio", "Shower"],
+      "map_link": "https://maps.google.com/?q=G-11+Markaz+Islamabad"
+    },
+    {
+      "name": "RWP Flex Arena",
+      "city": "Rawalpindi",
+      "address": "Bahria Town Phase 4, Rawalpindi",
+      "phone": "+923104447788",
+      "timings": "6:00 AM - 10:30 PM",
+      "facilities": ["Cardio", "Weights", "Group Classes", "Locker Room"],
+      "map_link": "https://maps.google.com/?q=Bahria+Town+Phase+4+Rawalpindi"
+    },
+    {
+      "name": "FSD Active Zone",
+      "city": "Faisalabad",
+      "address": "People Colony, Faisalabad",
+      "phone": "+923105551122",
+      "timings": "6:30 AM - 10:30 PM",
+      "facilities": ["HIIT Area", "Cardio", "Weights", "Trainer"],
+      "map_link": "https://maps.google.com/?q=People+Colony+Faisalabad"
+    },
+    {
+      "name": "Peshawar Fit Studio",
+      "city": "Peshawar",
+      "address": "Hayatabad Phase 3, Peshawar",
+      "phone": "+923106662244",
+      "timings": "7:00 AM - 10:00 PM",
+      "facilities": ["Cardio", "Weights", "Functional Training", "Parking"],
+      "map_link": "https://maps.google.com/?q=Hayatabad+Phase+3+Peshawar"
+    },
+    {
+      "name": "Multan Bodyworks",
+      "city": "Multan",
+      "address": "Bosan Road, Multan",
+      "phone": "+923107773355",
+      "timings": "6:00 AM - 10:30 PM",
+      "facilities": ["Weights", "Cardio", "Personal Trainer", "Shower"],
+      "map_link": "https://maps.google.com/?q=Bosan+Road+Multan"
+    },
+    {
+      "name": "Gujranwala Iron Temple",
+      "city": "Gujranwala",
+      "address": "Civil Lines, Gujranwala",
+      "phone": "+923108884466",
+      "timings": "6:00 AM - 11:00 PM",
+      "facilities": ["Powerlifting Area", "Weights", "Trainer", "Parking"],
+      "map_link": "https://maps.google.com/?q=Civil+Lines+Gujranwala"
+    },
+    {
+      "name": "Sialkot Power Club",
+      "city": "Sialkot",
+      "address": "Paris Road, Sialkot",
+      "phone": "+923109995577",
+      "timings": "6:00 AM - 10:30 PM",
+      "facilities": ["Cardio", "Weights", "CrossFit Zone", "Parking"],
+      "map_link": "https://maps.google.com/?q=Paris+Road+Sialkot"
+    },
+    {
+      "name": "Hyderabad Wellness Gym",
+      "city": "Hyderabad",
+      "address": "Latifabad Unit 7, Hyderabad",
+      "phone": "+923101234567",
+      "timings": "6:30 AM - 10:00 PM",
+      "facilities": ["Cardio", "Yoga", "Weights", "Trainer"],
+      "map_link": "https://maps.google.com/?q=Latifabad+Unit+7+Hyderabad"
     }
   ],
   "faqs": [
