@@ -45,6 +45,21 @@ if (workoutDataEl && workoutDetailsEl) {
             <ul class="guidance-list">
                 ${(workout.guidance || []).map((point) => `<li>${point}</li>`).join('')}
             </ul>
+            ${
+                workout.videos && workout.videos.length
+                    ? `
+                        <h4>Related YouTube Videos</h4>
+                        <ul class="video-links">
+                            ${workout.videos
+                                .map(
+                                    (video) =>
+                                        `<li><a href="${video.url}" target="_blank" rel="noopener noreferrer">▶ ${video.title}</a></li>`
+                                )
+                                .join('')}
+                        </ul>
+                    `
+                    : ''
+            }
         `;
     };
 

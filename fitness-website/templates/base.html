@@ -45,25 +45,39 @@
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div>
+            <div class="footer-card reveal">
                 <h3>FitnessHub</h3>
                 <p class="muted">Helping you improve your health with clear workout advice, nutrition guidance, and local gym finder tools in one simple platform.</p>
+                <div class="footer-badges">
+                    <span>🏋 Beginner Friendly</span>
+                    <span>🥗 Practical Nutrition</span>
+                    <span>📍 Local Gym Finder</span>
+                </div>
             </div>
-            <div>
+            <div class="footer-card reveal">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('workouts') }}">Workouts</a></li>
-                    <li><a href="{{ url_for('nutrition') }}">Nutrition</a></li>
-                    <li><a href="{{ url_for('gyms') }}">Find Gyms</a></li>
+                    <li><a href="{{ url_for('home') }}"><span class="footer-icon">⌂</span>Home</a></li>
+                    <li><a href="{{ url_for('workouts') }}"><span class="footer-icon">▣</span>Workouts</a></li>
+                    <li><a href="{{ url_for('nutrition') }}"><span class="footer-icon">◉</span>Nutrition</a></li>
+                    <li><a href="{{ url_for('gyms') }}"><span class="footer-icon">⌖</span>Find Gyms</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="footer-card reveal">
+                <h4>Support Hours</h4>
+                <ul class="footer-links footer-hours">
+                    <li><span class="footer-icon">⏰</span>Mon - Fri: 9:00 AM - 8:00 PM</li>
+                    <li><span class="footer-icon">⏰</span>Sat: 10:00 AM - 6:00 PM</li>
+                    <li><span class="footer-icon">☁</span>Sun: Online support only</li>
+                </ul>
+            </div>
+            <div class="footer-card reveal">
                 <h4>Contact</h4>
                 <ul class="footer-links">
-                    <li><a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a></li>
-                    <li><a href="tel:+1234567890">+1234567890</a></li>
+                    <li><a href="mailto:info@fitnesshub.com"><span class="footer-icon">✉</span>info@fitnesshub.com</a></li>
+                    <li><a href="tel:+1234567890"><span class="footer-icon">☎</span>+1234567890</a></li>
                 </ul>
+                <a class="btn btn-outline footer-top-link" href="#">Back to Top ↑</a>
             </div>
         </div>
         <div class="copyright">© {{ current_year }} FitnessHub. All rights reserved.</div>
