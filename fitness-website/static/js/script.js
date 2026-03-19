@@ -128,6 +128,34 @@ if (bmiForm && bmiResult) {
     });
 }
 
+const mealSelects = document.querySelectorAll('.meal-select');
+
+if (mealSelects.length) {
+    mealSelects.forEach((select) => {
+        const options = JSON.parse(select.dataset.options || '[]');
+        const targetId = select.dataset.target;
+        const targetList = targetId ? document.getElementById(targetId) : null;
+
+        if (!targetList) {
+            return;
+        }
+
+        const renderMealItems = (index) => {
+            const selectedOption = options[index];
+            if (!selectedOption || !selectedOption.items) {
+                return;
+            }
+
+            targetList.innerHTML = selectedOption.items.map((item) => `<li>${item}</li>`).join('');
+        };
+
+        select.addEventListener('change', (event) => {
+            const selectedIndex = Number(event.target.value || 0);
+            renderMealItems(selectedIndex);
+        });
+    });
+}
+
 const revealElements = document.querySelectorAll('.reveal');
 if (revealElements.length) {
     revealElements.forEach((element, index) => {

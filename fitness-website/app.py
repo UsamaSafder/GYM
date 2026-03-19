@@ -51,6 +51,7 @@ def nutrition() -> str:
         "nutrition.html",
         nutrition_basics=data["nutrition_basics"],
         meal_plans=data["meal_plans"],
+        nutrition_programs=data["nutrition_programs"],
         nutrition_tips=data["nutrition_tips"],
         pre_workout=data["pre_workout"],
         post_workout=data["post_workout"],

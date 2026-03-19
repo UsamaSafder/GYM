@@ -27,15 +27,38 @@
 <section class="section section-alt">
     <div class="container">
         <h2>Sample Meal Plans</h2>
+        <p class="muted">Select different options for each meal category based on your preference and training demand.</p>
         <div class="card-grid three-col">
             {% for meal in meal_plans %}
-            <article class="card reveal">
+            <article class="card reveal meal-card">
                 <h3>{{ meal.name }}</h3>
-                <ul class="list">
-                    {% for item in meal['items'] %}
+                <label class="meal-select-label" for="meal-select-{{ loop.index0 }}">Choose Plan</label>
+                <select id="meal-select-{{ loop.index0 }}" class="meal-select" data-options='{{ meal["options"] | tojson | forceescape }}' data-target="meal-items-{{ loop.index0 }}">
+                    {% for option in meal['options'] %}
+                    <option value="{{ loop.index0 }}">{{ option.label }}</option>
+                    {% endfor %}
+                </select>
+                <ul class="list meal-items" id="meal-items-{{ loop.index0 }}">
+                    {% for item in meal['options'][0]['items'] %}
                     <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Nutrition Plan Variety</h2>
+        <div class="card-grid three-col">
+            {% for plan in nutrition_programs %}
+            <article class="card reveal">
+                <h3>{{ plan.name }}</h3>
+                <p><strong>Description:</strong> {{ plan.description }}</p>
+                <p><strong>Focus:</strong> {{ plan.focus }}</p>
+                <p><strong>Best For:</strong> {{ plan.best_for }}</p>
             </article>
             {% endfor %}
         </div>
@@ -105,4 +128,6 @@
         </div>
     </div>
 </section>
+
+<script id="meal-plans-data" type="application/json">{{ meal_plans | tojson }}</script>
 {% endblock %}

@@ -298,38 +298,148 @@
   "meal_plans": [
     {
       "name": "Breakfast",
-      "items": [
-        "Oats with banana and milk",
-        "Boiled eggs",
-        "Green tea or water",
-        "Optional: chia seeds for extra fiber"
+      "options": [
+        {
+          "label": "Option 1 - Classic Balanced",
+          "items": [
+            "Oats with banana and milk",
+            "Boiled eggs",
+            "Green tea or water",
+            "Optional: chia seeds for extra fiber"
+          ]
+        },
+        {
+          "label": "Option 2 - High Protein",
+          "items": [
+            "Greek yogurt bowl with berries",
+            "2-3 scrambled eggs",
+            "Whole wheat toast",
+            "Water"
+          ]
+        },
+        {
+          "label": "Option 3 - Quick Office/Student",
+          "items": [
+            "Peanut butter sandwich on whole wheat bread",
+            "1 banana",
+            "Milk or unsweetened soy milk",
+            "Handful of nuts"
+          ]
+        }
       ]
     },
     {
       "name": "Lunch",
-      "items": [
-        "Grilled chicken",
-        "Brown rice",
-        "Mixed vegetables",
-        "Yogurt or buttermilk"
+      "options": [
+        {
+          "label": "Option 1 - Lean Muscle",
+          "items": [
+            "Grilled chicken",
+            "Brown rice",
+            "Mixed vegetables",
+            "Yogurt or buttermilk"
+          ]
+        },
+        {
+          "label": "Option 2 - Vegetarian Power",
+          "items": [
+            "Lentils / chickpeas",
+            "Quinoa or brown rice",
+            "Stir-fried vegetables",
+            "Curd"
+          ]
+        },
+        {
+          "label": "Option 3 - Weight Loss",
+          "items": [
+            "Large salad bowl with protein",
+            "Small serving whole grains",
+            "Olive oil + lemon dressing",
+            "Water"
+          ]
+        }
       ]
     },
     {
       "name": "Snack",
-      "items": [
-        "Greek yogurt with berries",
-        "A handful of almonds or peanuts",
-        "1 seasonal fruit"
+      "options": [
+        {
+          "label": "Option 1 - Recovery Snack",
+          "items": [
+            "Greek yogurt with berries",
+            "A handful of almonds or peanuts",
+            "1 seasonal fruit"
+          ]
+        },
+        {
+          "label": "Option 2 - Quick Energy",
+          "items": [
+            "Banana",
+            "Peanut butter (1 tbsp)",
+            "Black coffee or water"
+          ]
+        },
+        {
+          "label": "Option 3 - High Protein",
+          "items": [
+            "Boiled eggs",
+            "Paneer cubes / cottage cheese",
+            "Cucumber and carrot sticks"
+          ]
+        }
       ]
     },
     {
       "name": "Dinner",
-      "items": [
-        "Fish or chicken",
-        "Salad",
-        "Sweet potato or whole wheat bread",
-        "Soup (optional for satiety)"
+      "options": [
+        {
+          "label": "Option 1 - Light and Balanced",
+          "items": [
+            "Fish or chicken",
+            "Salad",
+            "Sweet potato or whole wheat bread",
+            "Soup (optional for satiety)"
+          ]
+        },
+        {
+          "label": "Option 2 - Protein Focus",
+          "items": [
+            "Grilled paneer / tofu / chicken",
+            "Steamed vegetables",
+            "Small quinoa serving",
+            "Herbal tea"
+          ]
+        },
+        {
+          "label": "Option 3 - Professional Athlete",
+          "items": [
+            "Lean meat or fish",
+            "Complex carbs (rice/potato)",
+            "Mixed vegetables",
+            "Casein-rich yogurt before sleep"
+          ]
+        }
       ]
+    }
+  ],
+  "nutrition_programs": [
+    {
+      "name": "Beginner Plan",
+      "description": "Simple portion control with balanced meals and hydration habits.",
+      "focus": "Build consistency and remove junk-food dependence.",
+      "best_for": "New gym users"
+    },
+    {
+      "name": "Intermediate Plan",
+      "description": "Higher protein distribution and meal timing around workouts.",
+      "focus": "Improve body composition and workout recovery.",
+      "best_for": "People training 4-5 days/week"
+    },
+    {
+      "name": "Professional Performance Plan",
+      "description": "Structured macro-focused intake with performance fueling windows.",
+      "focus": "Support intense training, recovery, and muscle preservation.",
+      "best_for": "Advanced trainees / competitive athletes"
     }
   ],
   "nutrition_tips": [

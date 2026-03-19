@@ -482,7 +482,8 @@ h2 {
 .search-input,
 .contact-form input,
 .contact-form textarea,
-.inline-form input {
+.inline-form input,
+.meal-select {
     width: 100%;
     background: #15181d;
     border: 1px solid var(--border);
@@ -496,10 +497,32 @@ h2 {
 .search-input:focus,
 .contact-form input:focus,
 .contact-form textarea:focus,
-.inline-form input:focus {
+.inline-form input:focus,
+.meal-select:focus {
     outline: none;
     border-color: rgba(229, 57, 53, 0.8);
     box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.14);
+}
+
+.meal-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.meal-select-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #e4eaf5;
+    font-size: 0.9rem;
+}
+
+.meal-select {
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.meal-items li {
+    margin-bottom: 0.35rem;
 }
 
 .search-input {
